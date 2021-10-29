@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+
+
+
+@foreach (var p in Model)
+{
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">@p.Name</h5>
+            <h6 class="card-subtitle mb-2 text-muted">@p.Category</h6>
+            <p class="card-text">@p.Description</p>
+            <p class="text-danger lead">@p.Price €</p>
+        </div>
+    </div>
+}
